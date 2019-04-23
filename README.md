@@ -1,5 +1,5 @@
 # magento1-mjml
-Magento 1 support MJML in emails
+Magento 1 support MJML in emails.
 The module requires npm and node_modules directory in your Magento root.
 
 ## Installing
