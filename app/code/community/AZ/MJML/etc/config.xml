@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <AZ_MJML>
+            <version>1.0.0</version>
+        </AZ_MJML>
+    </modules>
+    <global>
+        <helpers>
+            <az_mjml>
+                <class>AZ_MJML_Helper</class>
+            </az_mjml>
+        </helpers>
+        <models>
+            <core>
+                <rewrite>
+                    <email_template>AZ_MJML_Model_Rewrite_Mage_Core_Email_Template</email_template>
+                </rewrite>
+            </core>
+        </models>
+        <resources>
+            <az_mjml_setup>
+                <setup>
+                    <module>AZ_MJML</module>
+                </setup>
+            </az_mjml_setup>
+        </resources>
+    </global>
+</config>

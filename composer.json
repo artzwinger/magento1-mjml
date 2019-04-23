@@ -1,0 +1,15 @@
+{
+    "name": "AZ/MJML",
+    "license": "OSL-3.0",
+    "type": "magento-module",
+    "description": "Support MJML in Magento 1 emails",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors":[
+        {
+            "name":"Art Zwinger",
+            "email":"artzwinger@gmail.com"
+        }
+    ]
+}
