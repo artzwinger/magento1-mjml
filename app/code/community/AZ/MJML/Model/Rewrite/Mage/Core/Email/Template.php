@@ -5,24 +5,13 @@ class AZ_MJML_Model_Rewrite_Mage_Core_Email_Template extends Mage_Core_Model_Ema
     public function getPreparedTemplateText($html = null)
     {
         if ($this->isMJMLTemplate()) {
-            $compiled = $this->getCompiledMJMLTemplateText();
-            if ($compiled) {
-                return $compiled;
+            $compiled = $this->getCompiledMJMLTemplateText($html);
+            if (!empty($compiled)) {
+                $html = $compiled;
             }
         }
 
         return parent::getPreparedTemplateText($html);
-    }
-
-    public function setTemplateText($templateText)
-    {
-        $this->setData('template_text', $templateText);
-        if ($this->isMJMLTemplate()) {
-            $compiled = $this->getCompiledMJMLTemplateText();
-            if ($compiled) {
-                $this->setData('template_text', $compiled);
-            }
-        }
     }
 
     protected function isMJMLTemplate()
@@ -31,9 +20,9 @@ class AZ_MJML_Model_Rewrite_Mage_Core_Email_Template extends Mage_Core_Model_Ema
         return strstr($templateText, '<mjml>');
     }
 
-    protected function getCompiledMJMLTemplateText()
+    protected function getCompiledMJMLTemplateText($mjml)
     {
-        return $this->getMJMLCompiler()->compile($this->getTemplateText());
+        return $this->getMJMLCompiler()->compile($mjml);
     }
 
     /**

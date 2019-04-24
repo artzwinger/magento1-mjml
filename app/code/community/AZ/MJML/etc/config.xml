@@ -2,7 +2,7 @@
 <config>
     <modules>
         <AZ_MJML>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </AZ_MJML>
     </modules>
     <global>
