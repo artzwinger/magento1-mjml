@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Onilab_MJML>
+            <version>1.0.2</version>
+        </Onilab_MJML>
+    </modules>
+    <global>
+        <helpers>
+            <onilab_mjml>
+                <class>Onilab_MJML_Helper</class>
+            </onilab_mjml>
+        </helpers>
+        <models>
+            <core>
+                <rewrite>
+                    <email_template>Onilab_MJML_Model_Rewrite_Mage_Core_Email_Template</email_template>
+                </rewrite>
+            </core>
+        </models>
+        <resources>
+            <onilab_mjml_setup>
+                <setup>
+                    <module>Onilab_MJML</module>
+                </setup>
+            </onilab_mjml_setup>
+        </resources>
+    </global>
+</config>

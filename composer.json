@@ -1,5 +1,5 @@
 {
-    "name": "az/mjml",
+    "name": "onilab/mjml",
     "license": "OSL-3.0",
     "type": "magento-module",
     "description": "Support MJML in Magento 1 emails",

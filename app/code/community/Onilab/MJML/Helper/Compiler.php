@@ -1,6 +1,6 @@
 <?php
 
-class AZ_MJML_Helper_Compiler extends Mage_Core_Helper_Abstract
+class Onilab_MJML_Helper_Compiler extends Mage_Core_Helper_Abstract
 {
     public function compile($mjmlContent)
     {

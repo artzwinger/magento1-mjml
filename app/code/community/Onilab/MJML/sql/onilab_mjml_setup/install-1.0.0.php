@@ -16,7 +16,7 @@ stream_set_blocking($pipes[2], 0);
 
 try {
     if (($error = stream_get_contents($pipes[2])) !== false) {
-        throw new Exception('Can not install module AZ MJML: ' . $error);
+        throw new Exception('Can not install module Onilab MJML: ' . $error);
     }
     stream_set_blocking($pipes[2], 1);
 
@@ -28,11 +28,11 @@ try {
 
     do {
         if (false === ($rv = stream_select($read, $write, $except, 1, 0))) {
-            throw new Exception('Can not install module AZ MJML: error in stream_select');
+            throw new Exception('Can not install module Onilab MJML: error in stream_select');
         } else if ($rv > 0) {
             foreach ($read as $readPipe) {
                 if ($readPipe == $pipes[2]) {
-                    Mage::throwException('Can not install module AZ MJML: can not install mjml npm package');
+                    Mage::throwException('Can not install module Onilab MJML: can not install mjml npm package');
                     break;
                 }
             }

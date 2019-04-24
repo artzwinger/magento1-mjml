@@ -1,6 +1,6 @@
 <?php
 
-class AZ_MJML_Model_Rewrite_Mage_Core_Email_Template extends Mage_Core_Model_Email_Template
+class Onilab_MJML_Model_Rewrite_Mage_Core_Email_Template extends Mage_Core_Model_Email_Template
 {
     public function getPreparedTemplateText($html = null)
     {
@@ -26,10 +26,10 @@ class AZ_MJML_Model_Rewrite_Mage_Core_Email_Template extends Mage_Core_Model_Ema
     }
 
     /**
-     * @return AZ_MJML_Helper_Compiler
+     * @return Onilab_MJML_Helper_Compiler
      */
     protected function getMJMLCompiler()
     {
-        return Mage::helper('az_mjml/compiler');
+        return Mage::helper('onilab_mjml/compiler');
     }
 }
